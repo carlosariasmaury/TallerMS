@@ -13,7 +13,7 @@ def base():
                     mimetype='application/json')
   
 
-@app.route('/mongodb', methods=['GET'])
+@app.route('/MedicalRequest', methods=['GET'])
 def mongo_read():
     data = request.json
     if data is None or data == {}:
@@ -27,7 +27,7 @@ def mongo_read():
                     mimetype='application/json')
 
 
-@app.route('/mongodb', methods=['POST'])
+@app.route('/MedicalRequest', methods=['POST'])
 def mongo_write():
     data = request.json
     if data is None or data == {} or 'Document' not in data:
@@ -40,7 +40,7 @@ def mongo_write():
                     status=200,
                     mimetype='application/json')
 
-@app.route('/mongodb', methods=['PUT'])
+@app.route('/MedicalRequest', methods=['PUT'])
 def mongo_update():
     data = request.json
     if data is None or data == {} or 'Filter' not in data:
@@ -54,7 +54,7 @@ def mongo_update():
                     mimetype='application/json')
 
 
-@app.route('/mongodb', methods=['DELETE'])
+@app.route('/MedicalRequest', methods=['DELETE'])
 def mongo_delete():
     data = request.json
     if data is None or data == {} or 'Filter' not in data:
